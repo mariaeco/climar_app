@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "height": 0.41632625978472876,
+      "time": "2024-09-25T10:41:00+00:00",
+      "type": "high"
+    },
+    {
+      "height": -0.5026891593157488,
+      "time": "2024-09-25T19:58:00+00:00",
+      "type": "low"
+    }
+  ],
+  "meta": {
+    "cost": 1,
+    "dailyQuota": 10,
+    "datum": "MSL",
+    "end": "2024-09-26 00:00",
+    "lat": 35.6895,
+    "lng": 139.6917,
+    "offset": 0,
+    "requestCount": 3,
+    "start": "2024-09-25 00:00",
+    "station": {
+      "distance": 7,
+      "lat": 35.667,
+      "lng": 139.767,
+      "name": "tukizi",
+      "source": "sg"
+    }
+  }
+}

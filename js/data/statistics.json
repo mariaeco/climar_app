@@ -1,0 +1,333 @@
+[
+    {
+      "cod": 200,
+      "city_id": 5400075,
+      "city": "NATAL",
+      "lat": -5.795,
+      "long": -35.2094,
+      "result": [
+        {
+          "year": 2010,
+          "temp": {
+            "min": 295.15,
+            "max": 305.15,
+            "mean": 300.15
+          },
+          "humidity": {
+            "min": 60,
+            "max": 95,
+            "mean": 75
+          },
+          "wind": {
+            "min": 2,
+            "max": 15,
+            "mean": 5
+          },
+          "precipitation": {
+            "min": 0,
+            "max": 0.5,
+            "mean": 0.2
+          }
+        },
+        {
+          "year": 2011,
+          "temp": {
+            "min": 294.95,
+            "max": 304.85,
+            "mean": 299.9
+          },
+          "humidity": {
+            "min": 61,
+            "max": 93,
+            "mean": 74
+          },
+          "wind": {
+            "min": 3,
+            "max": 12,
+            "mean": 6
+          },
+          "precipitation": {
+            "min": 0.1,
+            "max": 0.6,
+            "mean": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "cod": 200,
+      "city_id": 5400076,
+      "city": "RECIFE",
+      "lat": -8.0476,
+      "long": -34.877,
+      "result": [
+        {
+          "year": 2010,
+          "temp": {
+            "min": 296.15,
+            "max": 306.15,
+            "mean": 301.15
+          },
+          "humidity": {
+            "min": 65,
+            "max": 98,
+            "mean": 80
+          },
+          "wind": {
+            "min": 3,
+            "max": 13,
+            "mean": 6
+          },
+          "precipitation": {
+            "min": 0.2,
+            "max": 0.7,
+            "mean": 0.4
+          }
+        },
+        {
+          "year": 2011,
+          "temp": {
+            "min": 295.95,
+            "max": 305.85,
+            "mean": 300.9
+          },
+          "humidity": {
+            "min": 67,
+            "max": 97,
+            "mean": 82
+          },
+          "wind": {
+            "min": 2,
+            "max": 12,
+            "mean": 7
+          },
+          "precipitation": {
+            "min": 0.3,
+            "max": 0.6,
+            "mean": 0.35
+          }
+        }
+      ]
+    },
+    {
+      "cod": 200,
+      "city_id": 5128581,
+      "city": "NOVA YORK",
+      "lat": 40.7128,
+      "long": -74.006,
+      "result": [
+        {
+          "year": 2010,
+          "temp": {
+            "min": 273.15,
+            "max": 293.15,
+            "mean": 283.15
+          },
+          "humidity": {
+            "min": 40,
+            "max": 90,
+            "mean": 70
+          },
+          "wind": {
+            "min": 2,
+            "max": 20,
+            "mean": 10
+          },
+          "precipitation": {
+            "min": 0,
+            "max": 1.2,
+            "mean": 0.6
+          }
+        },
+        {
+          "year": 2011,
+          "temp": {
+            "min": 274.15,
+            "max": 294.15,
+            "mean": 284.15
+          },
+          "humidity": {
+            "min": 45,
+            "max": 85,
+            "mean": 75
+          },
+          "wind": {
+            "min": 3,
+            "max": 22,
+            "mean": 12
+          },
+          "precipitation": {
+            "min": 0.2,
+            "max": 1.3,
+            "mean": 0.7
+          }
+        }
+      ]
+    },
+    {
+      "cod": 200,
+      "city_id": 1850147,
+      "city": "TÓQUIO",
+      "lat": 35.6895,
+      "long": 139.6917,
+      "result": [
+        {
+          "year": 2010,
+          "temp": {
+            "min": 280.15,
+            "max": 298.15,
+            "mean": 290.15
+          },
+          "humidity": {
+            "min": 50,
+            "max": 90,
+            "mean": 70
+          },
+          "wind": {
+            "min": 3,
+            "max": 25,
+            "mean": 12
+          },
+          "precipitation": {
+            "min": 0,
+            "max": 1.0,
+            "mean": 0.4
+          }
+        },
+        {
+          "year": 2011,
+          "temp": {
+            "min": 281.15,
+            "max": 299.15,
+            "mean": 291.15
+          },
+          "humidity": {
+            "min": 55,
+            "max": 88,
+            "mean": 72
+          },
+          "wind": {
+            "min": 4,
+            "max": 23,
+            "mean": 13
+          },
+          "precipitation": {
+            "min": 0.1,
+            "max": 1.1,
+            "mean": 0.6
+          }
+        }
+      ]
+    },
+    {
+      "cod": 200,
+      "city_id": 6167865,
+      "city": "TORONTO",
+      "lat": 43.65107,
+      "long": -79.347015,
+      "result": [
+        {
+          "year": 2010,
+          "temp": {
+            "min": 250.15,
+            "max": 280.15,
+            "mean": 265.15
+          },
+          "humidity": {
+            "min": 50,
+            "max": 85,
+            "mean": 65
+          },
+          "wind": {
+            "min": 4,
+            "max": 30,
+            "mean": 15
+          },
+          "precipitation": {
+            "min": 0.1,
+            "max": 0.8,
+            "mean": 0.4
+          }
+        },
+        {
+          "year": 2011,
+          "temp": {
+            "min": 251.15,
+            "max": 281.15,
+            "mean": 266.15
+          },
+          "humidity": {
+            "min": 55,
+            "max": 88,
+            "mean": 70
+          },
+          "wind": {
+            "min": 5,
+            "max": 28,
+            "mean": 14
+          },
+          "precipitation": {
+            "min": 0.2,
+            "max": 0.9,
+            "mean": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "cod": 200,
+      "city_id": 360630,
+      "city": "CAIRO",
+      "lat": 30.033333,
+      "long": 31.233334,
+      "result": [
+        {
+          "year": 2010,
+          "temp": {
+            "min": 290.15,
+            "max": 310.15,
+            "mean": 300.15
+          },
+          "humidity": {
+            "min": 20,
+            "max": 70,
+            "mean": 40
+          },
+          "wind": {
+            "min": 2,
+            "max": 18,
+            "mean": 8
+          },
+          "precipitation": {
+            "min": 0,
+            "max": 0.1,
+            "mean": 0.01
+          }
+        },
+        {
+          "year": 2011,
+          "temp": {
+            "min": 291.15,
+            "max": 311.15,
+            "mean": 301.15
+          },
+          "humidity": {
+            "min": 25,
+            "max": 65,
+            "mean": 42
+          },
+          "wind": {
+            "min": 3,
+            "max": 20,
+            "mean": 10
+          },
+          "precipitation": {
+            "min": 0,
+            "max": 0.2,
+            "mean": 0.02
+          }
+        }
+      ]
+    }
+  ]
+  

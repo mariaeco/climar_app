@@ -1,0 +1,45 @@
+{
+  "coord": {
+    "lon": -118.2437,
+    "lat": 34.0522
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 28.2,
+    "feels_like": 29.87,
+    "temp_min": 22.28,
+    "temp_max": 34.35,
+    "pressure": 1007,
+    "humidity": 61,
+    "sea_level": 1007,
+    "grnd_level": 988
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 4.12,
+    "deg": 120
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1727990625,
+  "sys": {
+    "type": 2,
+    "id": 2075946,
+    "country": "US",
+    "sunrise": 1727963352,
+    "sunset": 1728005652
+  },
+  "timezone": -25200,
+  "id": 5368361,
+  "name": "Los Angeles",
+  "cod": 200
+}

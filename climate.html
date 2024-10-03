@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="static/climate.css">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <section class="flex-climate">
+        <div class="overlay">
+            <div class="top-container">
+                <a class="text" href="index.html">
+                    <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </a>
+                <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div class="bottom-container">
+                <div class="weather-box">
+                    <p class="cityname">City</p>
+                    <p class="temperature">Temperature</p>
+                    <p class="description">temp description</p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="humidity">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div class="text">
+                            <span></span>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="rain">
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <div class="text">
+                            <span></span>
+                            <p>Preciptation</p>
+                        </div>
+                    </div>
+                    <div class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="text">
+                            <span></span>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="tide">
+                        <i class="fa-solid fa-water"></i>
+                        <a class="text" href="description.html">
+                            <span id="value"></span>
+                            <span id="type"></span>
+                            <p>Tide</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+
+
+    <script type="module" src="js/climate.js"></script>
+</body>
+
+</html>
