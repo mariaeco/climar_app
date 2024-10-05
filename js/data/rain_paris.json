@@ -1,0 +1,33 @@
+{
+  "data": {
+    "time": "2024-10-05T11:54:00Z",
+    "values": {
+      "cloudBase": null,
+      "cloudCeiling": null,
+      "cloudCover": 0,
+      "dewPoint": 4.69,
+      "freezingRainIntensity": 0,
+      "humidity": 44,
+      "precipitationProbability": 0,
+      "pressureSurfaceLevel": 848.28,
+      "rainIntensity": 0,
+      "sleetIntensity": 0,
+      "snowIntensity": 0,
+      "temperature": 16.88,
+      "temperatureApparent": 16.88,
+      "uvHealthConcern": 0,
+      "uvIndex": 0,
+      "visibility": 16,
+      "weatherCode": 1000,
+      "windDirection": 146.69,
+      "windGust": 7.5,
+      "windSpeed": 5.31
+    }
+  },
+  "location": {
+    "lat": 30.18890380859375,
+    "lon": -107.09557342529297,
+    "name": "Buenaventura, Chihuahua, 31890, México",
+    "type": "administrative"
+  }
+}

@@ -16,6 +16,19 @@ class Weather {
     }
 }
 
+class Rain {
+    constructor(rain) {
+        this.rain = rain.rainIntensity;
+        this.probRain = rain.precipitationProbability;
+
+    }
+
+    // Método para formatar os dados do clima para exibição
+    displayRain() {
+        return `Rain: ${this.rain}mm, Preciptation Probability: ${this.probRain}%`;
+    }
+}
+
 // CLASSE TIDE
 class Tide {
     constructor(tides) {
@@ -58,8 +71,6 @@ class Tide {
         return closestTide;
     }
 
-
-
     displayTide() {
         return `Nearest time: ${this.nearhour}, Ntides: ${this.number_tides}, Height: ${this.hours}, Height: ${this.heights} m, Type: ${this.types}`;
     }
@@ -67,14 +78,15 @@ class Tide {
 
 
 
-// Recupera os dados armazenados no localStorage 
+// // Recupera os dados armazenados no localStorage 
 const apiData = JSON.parse(localStorage.getItem('apiData'));
 const apiDataTide = JSON.parse(localStorage.getItem('apiDataTide'));
-
+const apiDataRain = JSON.parse(localStorage.getItem('apiDataRain'));
 
 ////PARA SALVAR OS ARQUIVOS ------------------------------------------------------------------------------------
-downloadJSON(apiData, 'climate_data.json');// DOWNLOAD
-downloadJSON(apiDataTide, 'tide_data.json');
+//downloadJSON(apiData, 'climate_data.json');// DOWNLOAD
+//downloadJSON(apiDataTide, 'tide_data.json');
+//downloadJSON(apiDataRain, 'rain_data.json');
 
 ////PARA ABRIR ARQUIVO SALVOS ----------------------------------------------------------------------------------
 ////SE estiver trabalhando sem as chaves, use a função abaixo para rodar os dados:
@@ -98,17 +110,14 @@ downloadJSON(apiDataTide, 'tide_data.json');
 //         console.error('Erro ao carregar o arquivo JSON:', error);
 //     });
 
-let today = new Date();
-let todayISO = today.toISOString().substring(0, 10);
-console.log('hoje:', todayISO);
-
-let yesterday = new Date();
-const timedecrease = -1;
-yesterday.setUTCDate(today.getUTCDate() + timedecrease)
-console.log('yes:', yesterday);
-let yesterdayISO = yesterday.toISOString().substring(0, 10)
-
-console.log('ontem:', yesterdayISO);
+// loadJSONFile('rain_tokyo.json')
+//     .then(apiDataTide => {
+//         // Processa os dados carregados
+//         localStorage.setItem('apiDataTide', JSON.stringify(apiDataTide));
+//     })
+//     .catch(error => {
+//         console.error('Erro ao carregar o arquivo JSON:', error);
+//     });
 
 
 if (apiData) {
@@ -158,18 +167,33 @@ if (apiData) {
     document.querySelector('.flex-climate').style.backgroundImage = backgroundImage; // Mudança aqui
 
 } else {
-    console.log('Nenhum dado de tempo no localStorage');
+    console.log('Nenhum dado de Clima no localStorage');
 }
 
 
+
+
+// RAIN DATA TO HTML
+if (apiDataRain) {
+    console.log(apiDataRain)
+    const rain = new Rain(apiDataRain.data.values);
+    console.log('Dados carregados de Chuva:', rain);
+    if (window.location.pathname.includes('climate.html')) {
+        document.querySelector('.rain span').textContent = `${rain.rain} mm`;
+    }
+} else {
+    console.log('Nenhum dado de Chuva no localStorage');
+}
+
+
+
+
+// // //TIDE DATA TO HTML
 if (apiDataTide) {
-    console.log(apiDataTide)
     //const tides = apiDataTide.data.map(tide => ({ time: tide.time, height: tide.height, type: tide.type }));
     const tideData = new Tide(apiDataTide.data);
     console.log('Dados carregados de Maré:', tideData);
-    
-
-
+   
     // Verifica se está na página climate.html
     if (window.location.pathname.includes('climate.html')) {
         const closestTide = tideData.findClosestTideTime();
