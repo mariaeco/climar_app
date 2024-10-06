@@ -1,0 +1,33 @@
+{
+  "data": {
+    "time": "2024-10-05T16:17:00Z",
+    "values": {
+      "cloudBase": null,
+      "cloudCeiling": null,
+      "cloudCover": 1,
+      "dewPoint": 7.69,
+      "freezingRainIntensity": 0,
+      "humidity": 69,
+      "precipitationProbability": 0,
+      "pressureSurfaceLevel": 1016.66,
+      "rainIntensity": 0,
+      "sleetIntensity": 0,
+      "snowIntensity": 0,
+      "temperature": 13.19,
+      "temperatureApparent": 13.19,
+      "uvHealthConcern": 0,
+      "uvIndex": 0,
+      "visibility": 16,
+      "weatherCode": 1000,
+      "windDirection": 131.81,
+      "windGust": 3.38,
+      "windSpeed": 2
+    }
+  },
+  "location": {
+    "lat": 52.37453842163086,
+    "lon": 4.897975444793701,
+    "name": "Amsterdam, Noord-Holland, Nederland",
+    "type": "administrative"
+  }
+}

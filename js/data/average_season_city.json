@@ -1,0 +1,211 @@
+{
+    "Amsterdam": {
+      "Inverno": {
+        "temperatura": 3.5,
+        "umidade": 85,
+        "precipitacao": 60,
+        "mare_alta": 1.2
+      },
+      "Primavera": {
+        "temperatura": 10.5,
+        "umidade": 70,
+        "precipitacao": 45,
+        "mare_alta": 1.5
+      },
+      "Verao": {
+        "temperatura": 17.5,
+        "umidade": 65,
+        "precipitacao": 35,
+        "mare_alta": 1.7
+      },
+      "Outono": {
+        "temperatura": 10,
+        "umidade": 75,
+        "precipitacao": 50,
+        "mare_alta": 1.4
+      }
+    },
+    "Natal": {
+      "Inverno": {
+        "temperatura": 25.5,
+        "umidade": 80,
+        "precipitacao": 110,
+        "mare_alta": 2.5
+      },
+      "Primavera": {
+        "temperatura": 26.5,
+        "umidade": 75,
+        "precipitacao": 90,
+        "mare_alta": 2.8
+      },
+      "Verao": {
+        "temperatura": 28.5,
+        "umidade": 70,
+        "precipitacao": 70,
+        "mare_alta": 3.0
+      },
+      "Outono": {
+        "temperatura": 27,
+        "umidade": 78,
+        "precipitacao": 100,
+        "mare_alta": 2.6
+      }
+    },
+    "Tokyo": {
+      "Inverno": {
+        "temperatura": 6.5,
+        "umidade": 60,
+        "precipitacao": 55,
+        "mare_alta": 1.8
+      },
+      "Primavera": {
+        "temperatura": 14.5,
+        "umidade": 65,
+        "precipitacao": 70,
+        "mare_alta": 2.1
+      },
+      "Verao": {
+        "temperatura": 27,
+        "umidade": 75,
+        "precipitacao": 150,
+        "mare_alta": 2.3
+      },
+      "Outono": {
+        "temperatura": 17.5,
+        "umidade": 68,
+        "precipitacao": 80,
+        "mare_alta": 2.0
+      }
+    },
+    "Sydney": {
+      "Inverno": {
+        "temperatura": 12.5,
+        "umidade": 65,
+        "precipitacao": 80,
+        "mare_alta": 1.9
+      },
+      "Primavera": {
+        "temperatura": 18,
+        "umidade": 55,
+        "precipitacao": 65,
+        "mare_alta": 2.1
+      },
+      "Verao": {
+        "temperatura": 22.5,
+        "umidade": 60,
+        "precipitacao": 95,
+        "mare_alta": 2.5
+      },
+      "Outono": {
+        "temperatura": 16.5,
+        "umidade": 70,
+        "precipitacao": 75,
+        "mare_alta": 2.0
+      }
+    },
+    "Dubai": {
+      "Inverno": {
+        "temperatura": 20,
+        "umidade": 50,
+        "precipitacao": 20,
+        "mare_alta": 2.7
+      },
+      "Primavera": {
+        "temperatura": 28.5,
+        "umidade": 45,
+        "precipitacao": 15,
+        "mare_alta": 3.0
+      },
+      "Verao": {
+        "temperatura": 35,
+        "umidade": 30,
+        "precipitacao": 5,
+        "mare_alta": 3.2
+      },
+      "Outono": {
+        "temperatura": 29.5,
+        "umidade": 40,
+        "precipitacao": 10,
+        "mare_alta": 3.0
+      }
+    },
+    "Paris": {
+      "Inverno": {
+        "temperatura": 5.5,
+        "umidade": 85,
+        "precipitacao": 55,
+        "mare_alta": 1.3
+      },
+      "Primavera": {
+        "temperatura": 12.5,
+        "umidade": 70,
+        "precipitacao": 50,
+        "mare_alta": 1.6
+      },
+      "Verao": {
+        "temperatura": 20,
+        "umidade": 65,
+        "precipitacao": 45,
+        "mare_alta": 1.8
+      },
+      "Outono": {
+        "temperatura": 11.5,
+        "umidade": 75,
+        "precipitacao": 50,
+        "mare_alta": 1.5
+      }
+    },
+    "Los Angeles": {
+      "Inverno": {
+        "temperatura": 15.5,
+        "umidade": 60,
+        "precipitacao": 55,
+        "mare_alta": 2.1
+      },
+      "Primavera": {
+        "temperatura": 18,
+        "umidade": 50,
+        "precipitacao": 25,
+        "mare_alta": 2.3
+      },
+      "Verao": {
+        "temperatura": 23,
+        "umidade": 45,
+        "precipitacao": 5,
+        "mare_alta": 2.7
+      },
+      "Outono": {
+        "temperatura": 18,
+        "umidade": 55,
+        "precipitacao": 30,
+        "mare_alta": 2.2
+      }
+    },
+    "Honolulu": {
+      "Inverno": {
+        "temperatura": 25,
+        "umidade": 75,
+        "precipitacao": 80,
+        "mare_alta": 2.9
+      },
+      "Primavera": {
+        "temperatura": 26.5,
+        "umidade": 70,
+        "precipitacao": 70,
+        "mare_alta": 3.0
+      },
+      "Verao": {
+        "temperatura": 28.5,
+        "umidade": 65,
+        "precipitacao": 60,
+        "mare_alta": 3.2
+      },
+      "Outono": {
+        "temperatura": 27,
+        "umidade": 72,
+        "precipitacao": 75,
+        "mare_alta": 3.1
+      }
+    }
+  }
+  

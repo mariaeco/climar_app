@@ -1,0 +1,722 @@
+{
+    "2013": [
+        {
+            "mes": 1,
+            "temperatura": 24.64,
+            "precipitacao": 117.11,
+            "umidade": 83.13,
+            "mare_alta": 2.51
+        },
+        {
+            "mes": 2,
+            "temperatura": 26.93,
+            "precipitacao": 113.16,
+            "umidade": 82.35,
+            "mare_alta": 2.48
+        },
+        {
+            "mes": 3,
+            "temperatura": 25.85,
+            "precipitacao": 87.91,
+            "umidade": 77.23,
+            "mare_alta": 2.56
+        },
+        {
+            "mes": 4,
+            "temperatura": 26.43,
+            "precipitacao": 79.38,
+            "umidade": 77.62,
+            "mare_alta": 2.8
+        },
+        {
+            "mes": 5,
+            "temperatura": 28.06,
+            "precipitacao": 91.65,
+            "umidade": 78.6,
+            "mare_alta": 2.71
+        },
+        {
+            "mes": 6,
+            "temperatura": 27.33,
+            "precipitacao": 64.04,
+            "umidade": 68.8,
+            "mare_alta": 3.04
+        },
+        {
+            "mes": 7,
+            "temperatura": 29.92,
+            "precipitacao": 70.36,
+            "umidade": 67.66,
+            "mare_alta": 3.1
+        },
+        {
+            "mes": 8,
+            "temperatura": 27.16,
+            "precipitacao": 73.75,
+            "umidade": 59.8,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 9,
+            "temperatura": 29.46,
+            "precipitacao": 59.79,
+            "umidade": 63.22,
+            "mare_alta": 2.87
+        },
+        {
+            "mes": 10,
+            "temperatura": 26.62,
+            "precipitacao": 99.65,
+            "umidade": 81.96,
+            "mare_alta": 2.62
+        }
+    ],
+    "2014": [
+        {
+            "mes": 1,
+            "temperatura": 25.45,
+            "precipitacao": 111.64,
+            "umidade": 77.88,
+            "mare_alta": 2.34
+        },
+        {
+            "mes": 2,
+            "temperatura": 25.29,
+            "precipitacao": 113.84,
+            "umidade": 68.91,
+            "mare_alta": 2.73
+        },
+        {
+            "mes": 3,
+            "temperatura": 26.38,
+            "precipitacao": 84.36,
+            "umidade": 63.08,
+            "mare_alta": 2.68
+        },
+        {
+            "mes": 4,
+            "temperatura": 26.33,
+            "precipitacao": 85.24,
+            "umidade": 70.92,
+            "mare_alta": 2.81
+        },
+        {
+            "mes": 5,
+            "temperatura": 27.23,
+            "precipitacao": 93.48,
+            "umidade": 77.53,
+            "mare_alta": 2.77
+        },
+        {
+            "mes": 6,
+            "temperatura": 27.7,
+            "precipitacao": 65.07,
+            "umidade": 64.77,
+            "mare_alta": 3.12
+        },
+        {
+            "mes": 7,
+            "temperatura": 29.83,
+            "precipitacao": 60.66,
+            "umidade": 68.08,
+            "mare_alta": 3.17
+        },
+        {
+            "mes": 8,
+            "temperatura": 27.9,
+            "precipitacao": 75.63,
+            "umidade": 75.71,
+            "mare_alta": 3.04
+        },
+        {
+            "mes": 9,
+            "temperatura": 29.27,
+            "precipitacao": 70.21,
+            "umidade": 74.26,
+            "mare_alta": 3.0
+        },
+        {
+            "mes": 10,
+            "temperatura": 25.98,
+            "precipitacao": 100.37,
+            "umidade": 81.87,
+            "mare_alta": 2.68
+        }
+    ],
+    "2015": [
+        {
+            "mes": 1,
+            "temperatura": 26.64,
+            "precipitacao": 112.75,
+            "umidade": 72.2,
+            "mare_alta": 2.53
+        },
+        {
+            "mes": 2,
+            "temperatura": 25.49,
+            "precipitacao": 107.17,
+            "umidade": 79.04,
+            "mare_alta": 2.32
+        },
+        {
+            "mes": 3,
+            "temperatura": 24.86,
+            "precipitacao": 84.57,
+            "umidade": 73.9,
+            "mare_alta": 2.73
+        },
+        {
+            "mes": 4,
+            "temperatura": 25.78,
+            "precipitacao": 84.7,
+            "umidade": 85.53,
+            "mare_alta": 2.66
+        },
+        {
+            "mes": 5,
+            "temperatura": 24.65,
+            "precipitacao": 93.97,
+            "umidade": 79.89,
+            "mare_alta": 2.61
+        },
+        {
+            "mes": 6,
+            "temperatura": 28.91,
+            "precipitacao": 71.46,
+            "umidade": 62.49,
+            "mare_alta": 2.82
+        },
+        {
+            "mes": 7,
+            "temperatura": 27.55,
+            "precipitacao": 68.91,
+            "umidade": 67.87,
+            "mare_alta": 3.01
+        },
+        {
+            "mes": 8,
+            "temperatura": 28.84,
+            "precipitacao": 66.91,
+            "umidade": 64.14,
+            "mare_alta": 2.84
+        },
+        {
+            "mes": 9,
+            "temperatura": 28.59,
+            "precipitacao": 66.88,
+            "umidade": 65.71,
+            "mare_alta": 2.96
+        },
+        {
+            "mes": 10,
+            "temperatura": 26.59,
+            "precipitacao": 107.14,
+            "umidade": 73.09,
+            "mare_alta": 2.72
+        }
+    ],
+    "2016": [
+        {
+            "mes": 1,
+            "temperatura": 22.77,
+            "precipitacao": 111.38,
+            "umidade": 76.44,
+            "mare_alta": 2.56
+        },
+        {
+            "mes": 2,
+            "temperatura": 26.09,
+            "precipitacao": 117.04,
+            "umidade": 84.4,
+            "mare_alta": 2.44
+        },
+        {
+            "mes": 3,
+            "temperatura": 26.57,
+            "precipitacao": 90.13,
+            "umidade": 84.27,
+            "mare_alta": 2.75
+        },
+        {
+            "mes": 4,
+            "temperatura": 26.46,
+            "precipitacao": 91.7,
+            "umidade": 80.07,
+            "mare_alta": 2.77
+        },
+        {
+            "mes": 5,
+            "temperatura": 26.1,
+            "precipitacao": 87.11,
+            "umidade": 73.9,
+            "mare_alta": 2.65
+        },
+        {
+            "mes": 6,
+            "temperatura": 29.22,
+            "precipitacao": 65.8,
+            "umidade": 68.91,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 7,
+            "temperatura": 29.85,
+            "precipitacao": 71.46,
+            "umidade": 65.79,
+            "mare_alta": 3.05
+        },
+        {
+            "mes": 8,
+            "temperatura": 27.8,
+            "precipitacao": 74.49,
+            "umidade": 68.12,
+            "mare_alta": 3.01
+        },
+        {
+            "mes": 9,
+            "temperatura": 28.82,
+            "precipitacao": 61.39,
+            "umidade": 70.53,
+            "mare_alta": 2.98
+        },
+        {
+            "mes": 10,
+            "temperatura": 28.2,
+            "precipitacao": 103.19,
+            "umidade": 64.78,
+            "mare_alta": 2.71
+        }
+    ],
+    "2017": [
+        {
+            "mes": 1,
+            "temperatura": 25.93,
+            "precipitacao": 108.33,
+            "umidade": 82.43,
+            "mare_alta": 2.25
+        },
+        {
+            "mes": 2,
+            "temperatura": 26.25,
+            "precipitacao": 114.29,
+            "umidade": 81.16,
+            "mare_alta": 2.6
+        },
+        {
+            "mes": 3,
+            "temperatura": 25.94,
+            "precipitacao": 90.51,
+            "umidade": 75.19,
+            "mare_alta": 2.91
+        },
+        {
+            "mes": 4,
+            "temperatura": 26.11,
+            "precipitacao": 85.43,
+            "umidade": 72.64,
+            "mare_alta": 2.79
+        },
+        {
+            "mes": 5,
+            "temperatura": 27.13,
+            "precipitacao": 88.12,
+            "umidade": 66.39,
+            "mare_alta": 2.84
+        },
+        {
+            "mes": 6,
+            "temperatura": 27.21,
+            "precipitacao": 75.06,
+            "umidade": 69.62,
+            "mare_alta": 2.85
+        },
+        {
+            "mes": 7,
+            "temperatura": 29.46,
+            "precipitacao": 79.39,
+            "umidade": 72.06,
+            "mare_alta": 3.16
+        },
+        {
+            "mes": 8,
+            "temperatura": 29.09,
+            "precipitacao": 69.37,
+            "umidade": 69.24,
+            "mare_alta": 3.16
+        },
+        {
+            "mes": 9,
+            "temperatura": 29.05,
+            "precipitacao": 71.16,
+            "umidade": 69.88,
+            "mare_alta": 2.89
+        },
+        {
+            "mes": 10,
+            "temperatura": 27.56,
+            "precipitacao": 99.76,
+            "umidade": 80.9,
+            "mare_alta": 2.67
+        }
+    ],
+    "2018": [
+        {
+            "mes": 1,
+            "temperatura": 23.66,
+            "precipitacao": 109.89,
+            "umidade": 75.73,
+            "mare_alta": 2.74
+        },
+        {
+            "mes": 2,
+            "temperatura": 25.64,
+            "precipitacao": 113.88,
+            "umidade": 80.36,
+            "mare_alta": 2.64
+        },
+        {
+            "mes": 3,
+            "temperatura": 26.26,
+            "precipitacao": 94.3,
+            "umidade": 73.14,
+            "mare_alta": 2.93
+        },
+        {
+            "mes": 4,
+            "temperatura": 26.88,
+            "precipitacao": 92.92,
+            "umidade": 76.9,
+            "mare_alta": 2.82
+        },
+        {
+            "mes": 5,
+            "temperatura": 25.53,
+            "precipitacao": 87.87,
+            "umidade": 78.64,
+            "mare_alta": 2.85
+        },
+        {
+            "mes": 6,
+            "temperatura": 28.78,
+            "precipitacao": 68.21,
+            "umidade": 67.17,
+            "mare_alta": 2.84
+        },
+        {
+            "mes": 7,
+            "temperatura": 25.88,
+            "precipitacao": 74.1,
+            "umidade": 69.18,
+            "mare_alta": 2.95
+        },
+        {
+            "mes": 8,
+            "temperatura": 28.72,
+            "precipitacao": 65.63,
+            "umidade": 73.94,
+            "mare_alta": 2.88
+        },
+        {
+            "mes": 9,
+            "temperatura": 29.86,
+            "precipitacao": 74.7,
+            "umidade": 75.47,
+            "mare_alta": 2.94
+        },
+        {
+            "mes": 10,
+            "temperatura": 28.58,
+            "precipitacao": 105.94,
+            "umidade": 72.95,
+            "mare_alta": 2.6
+        }
+    ],
+    "2019": [
+        {
+            "mes": 1,
+            "temperatura": 25.38,
+            "precipitacao": 107.68,
+            "umidade": 73.03,
+            "mare_alta": 2.46
+        },
+        {
+            "mes": 2,
+            "temperatura": 25.43,
+            "precipitacao": 104.96,
+            "umidade": 75.73,
+            "mare_alta": 2.53
+        },
+        {
+            "mes": 3,
+            "temperatura": 25.66,
+            "precipitacao": 85.83,
+            "umidade": 63.34,
+            "mare_alta": 2.59
+        },
+        {
+            "mes": 4,
+            "temperatura": 25.6,
+            "precipitacao": 86.31,
+            "umidade": 66.11,
+            "mare_alta": 2.81
+        },
+        {
+            "mes": 5,
+            "temperatura": 27.39,
+            "precipitacao": 88.07,
+            "umidade": 75.55,
+            "mare_alta": 2.74
+        },
+        {
+            "mes": 6,
+            "temperatura": 30.46,
+            "precipitacao": 59.5,
+            "umidade": 71.52,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 7,
+            "temperatura": 28.31,
+            "precipitacao": 71.81,
+            "umidade": 64.32,
+            "mare_alta": 2.96
+        },
+        {
+            "mes": 8,
+            "temperatura": 29.15,
+            "precipitacao": 75.7,
+            "umidade": 68.12,
+            "mare_alta": 2.99
+        },
+        {
+            "mes": 9,
+            "temperatura": 29.33,
+            "precipitacao": 68.6,
+            "umidade": 63.52,
+            "mare_alta": 3.04
+        },
+        {
+            "mes": 10,
+            "temperatura": 27.02,
+            "precipitacao": 100.68,
+            "umidade": 74.85,
+            "mare_alta": 2.6
+        }
+    ],
+    "2020": [
+        {
+            "mes": 1,
+            "temperatura": 25.43,
+            "precipitacao": 109.26,
+            "umidade": 83.69,
+            "mare_alta": 2.45
+        },
+        {
+            "mes": 2,
+            "temperatura": 24.39,
+            "precipitacao": 107.71,
+            "umidade": 80.65,
+            "mare_alta": 2.58
+        },
+        {
+            "mes": 3,
+            "temperatura": 26.53,
+            "precipitacao": 90.92,
+            "umidade": 83.27,
+            "mare_alta": 2.82
+        },
+        {
+            "mes": 4,
+            "temperatura": 27.5,
+            "precipitacao": 80.31,
+            "umidade": 66.79,
+            "mare_alta": 2.78
+        },
+        {
+            "mes": 5,
+            "temperatura": 25.97,
+            "precipitacao": 90.04,
+            "umidade": 74.89,
+            "mare_alta": 2.99
+        },
+        {
+            "mes": 6,
+            "temperatura": 29.21,
+            "precipitacao": 63.22,
+            "umidade": 60.8,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 7,
+            "temperatura": 27.3,
+            "precipitacao": 70.05,
+            "umidade": 73.94,
+            "mare_alta": 2.75
+        },
+        {
+            "mes": 8,
+            "temperatura": 29.68,
+            "precipitacao": 66.21,
+            "umidade": 70.33,
+            "mare_alta": 2.86
+        },
+        {
+            "mes": 9,
+            "temperatura": 28.57,
+            "precipitacao": 55.65,
+            "umidade": 71.57,
+            "mare_alta": 2.85
+        },
+        {
+            "mes": 10,
+            "temperatura": 28.4,
+            "precipitacao": 98.7,
+            "umidade": 80.66,
+            "mare_alta": 2.56
+        }
+    ],
+    "2021": [
+        {
+            "mes": 1,
+            "temperatura": 27.73,
+            "precipitacao": 106.9,
+            "umidade": 79.55,
+            "mare_alta": 2.56
+        },
+        {
+            "mes": 2,
+            "temperatura": 24.11,
+            "precipitacao": 108.15,
+            "umidade": 76.67,
+            "mare_alta": 2.44
+        },
+        {
+            "mes": 3,
+            "temperatura": 25.38,
+            "precipitacao": 96.16,
+            "umidade": 77.28,
+            "mare_alta": 2.76
+        },
+        {
+            "mes": 4,
+            "temperatura": 25.73,
+            "precipitacao": 94.39,
+            "umidade": 79.39,
+            "mare_alta": 2.97
+        },
+        {
+            "mes": 5,
+            "temperatura": 24.78,
+            "precipitacao": 85.04,
+            "umidade": 75.27,
+            "mare_alta": 3.16
+        },
+        {
+            "mes": 6,
+            "temperatura": 28.16,
+            "precipitacao": 70.6,
+            "umidade": 76.24,
+            "mare_alta": 3.1
+        },
+        {
+            "mes": 7,
+            "temperatura": 29.18,
+            "precipitacao": 74.26,
+            "umidade": 71.86,
+            "mare_alta": 3.02
+        },
+        {
+            "mes": 8,
+            "temperatura": 29.48,
+            "precipitacao": 74.1,
+            "umidade": 65.43,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 9,
+            "temperatura": 29.41,
+            "precipitacao": 72.43,
+            "umidade": 73.58,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 10,
+            "temperatura": 26.68,
+            "precipitacao": 102.66,
+            "umidade": 77.29,
+            "mare_alta": 2.6
+        }
+    ],
+    "2022": [
+        {
+            "mes": 1,
+            "temperatura": 25.95,
+            "precipitacao": 103.73,
+            "umidade": 81.32,
+            "mare_alta": 2.55
+        },
+        {
+            "mes": 2,
+            "temperatura": 26.06,
+            "precipitacao": 108.6,
+            "umidade": 79.95,
+            "mare_alta": 2.41
+        },
+        {
+            "mes": 3,
+            "temperatura": 26.54,
+            "precipitacao": 84.32,
+            "umidade": 75.79,
+            "mare_alta": 2.94
+        },
+        {
+            "mes": 4,
+            "temperatura": 26.97,
+            "precipitacao": 100.9,
+            "umidade": 77.44,
+            "mare_alta": 2.63
+        },
+        {
+            "mes": 5,
+            "temperatura": 26.55,
+            "precipitacao": 94.03,
+            "umidade": 68.02,
+            "mare_alta": 2.96
+        },
+        {
+            "mes": 6,
+            "temperatura": 28.99,
+            "precipitacao": 73.54,
+            "umidade": 75.44,
+            "mare_alta": 3.18
+        },
+        {
+            "mes": 7,
+            "temperatura": 28.62,
+            "precipitacao": 71.07,
+            "umidade": 74.22,
+            "mare_alta": 3.03
+        },
+        {
+            "mes": 8,
+            "temperatura": 29.07,
+            "precipitacao": 76.04,
+            "umidade": 59.29,
+            "mare_alta": 2.96
+        },
+        {
+            "mes": 9,
+            "temperatura": 28.6,
+            "precipitacao": 69.39,
+            "umidade": 75.97,
+            "mare_alta": 2.81
+        },
+        {
+            "mes": 10,
+            "temperatura": 27.16,
+            "precipitacao": 101.24,
+            "umidade": 72.27,
+            "mare_alta": 2.67
+        }
+    ]
+}
