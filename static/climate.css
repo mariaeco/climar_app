@@ -27,7 +27,6 @@ body {
     background-size: cover;
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
-    
 }
 
 .overlay {
@@ -136,11 +135,17 @@ i:hover {
     font-weight: 500;
 }
 
-.tide a {
+a {
     text-decoration: none; /* Remove underline do link */
     color: initial; /* Define a cor inicial */
 }
 
-.tide .text:hover p, .tide .text:hover span  {
-    color: rgb(158, 156, 160); /* Cor do span ao passar o mouse */
+.text:hover p, .text:hover span{
+    color: rgb(55, 53, 177); 
 }
+
+.tide .text:hover p, .tide .text:hover span  {
+    color: rgb(55, 53, 177); 
+}
+
+

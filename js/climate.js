@@ -1,5 +1,6 @@
-import { downloadJSON, loadJSONFile } from './functions.js';
 import { Weather, Rain, Tide} from './classes.js';
+import { downloadJSON, loadJSONFile } from './functions.js';
+import { plotarGrafico, plotarLastYearGrafico } from './plots.js';
 
 // // Recupera os dados armazenados no localStorage 
 const apiData = JSON.parse(localStorage.getItem('apiData'));
@@ -7,9 +8,9 @@ const apiDataTide = JSON.parse(localStorage.getItem('apiDataTide'));
 const apiDataRain = JSON.parse(localStorage.getItem('apiDataRain'));
 
 ////PARA SALVAR OS ARQUIVOS ------------------------------------------------------------------------------------
-//downloadJSON(apiData, 'climate_data.json');// DOWNLOAD
-//downloadJSON(apiDataTide, 'tide_data.json');
-//downloadJSON(apiDataRain, 'rain_data.json');
+// downloadJSON(apiData, 'climate_data.json');// DOWNLOAD
+// downloadJSON(apiDataTide, 'tide_data.json');
+// downloadJSON(apiDataRain, 'rain_data.json');
 
 ////PARA ABRIR ARQUIVO SALVOS ----------------------------------------------------------------------------------
 ////SE estiver trabalhando sem as chaves, use a função abaixo para rodar os dados:
@@ -43,6 +44,7 @@ const apiDataRain = JSON.parse(localStorage.getItem('apiDataRain'));
 //     });
 
 
+
 if (apiData) {
     const weather = new Weather(apiData);
     console.log('Dados carregados de Clima:', weather);
@@ -55,11 +57,63 @@ if (apiData) {
         document.querySelector('.wind span').textContent = `${weather.wind} km/h`;
     }
 
-    if (window.location.pathname.includes('description.html')) {
+    if (window.location.pathname.includes('tide_description.html')) {
         document.querySelector('.cityname').textContent = `${weather.cityname}`;
         document.querySelector('.temperature').textContent = `${weather.temperature}°C`;
         document.querySelector('.description').textContent = weather.description;
     }
+
+    //INCLUINDO AQUI OS DADOS HISTÓRICOS DE TEMPERATURA, VC PODE MUDAR A CIDADE ABAIXO - 
+    //OS DADOS ESTAO ARMAZENADOS NA PASTA DE DADOS
+    //SAO DADOS CRIADOS POIS OS HISTÓRICOS SÃO PAGOS
+
+    // Captura o clique nos links com a classe 'link-grafico'
+    let links = document.querySelectorAll('.link-grafico');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            localStorage.setItem('grafico', this.id); // Salva o ID no localStorage
+            window.location.href = 'historical.html'; // Redireciona para a página
+        });
+    });
+
+    // Dentro da página historical.html
+    if (window.location.pathname.includes('historical.html')) {
+        document.querySelector('.cityname').textContent = `${weather.cityname}`;
+        document.querySelector('.temperature').textContent = `${weather.temperature}°C`;
+        document.querySelector('.description').textContent = weather.description;
+
+        // Substitua 'Tokyo' pela cidade desejada
+        let city = 'DUBAI'; 
+        loadJSONFile(`historic_last_year_${city}.json`)
+            .then(data => {
+                localStorage.setItem('data', JSON.stringify(data));
+                let temp_yearData = data;
+                
+                // Obtém o ID salvo no localStorage
+                let graficoId = localStorage.getItem('grafico');
+            
+                // Verifica qual gráfico deve ser plotado com base no ID
+                if (graficoId === 'rain') {
+                    // Lógica para plotar o gráfico de chuva
+                    plotarLastYearGrafico(data, "precipitacao");
+                } else if (graficoId === 'umid') {
+                    // Lógica para plotar o gráfico de umidade
+                    plotarLastYearGrafico(data, "umidade");
+                } else if (graficoId === 'temp') {
+                    // Lógica para plotar o gráfico de temperatura
+                    plotarLastYearGrafico(data, "temperatura");
+                } else if (graficoId === 'wind') {
+                    // Lógica para plotar o gráfico de vento
+                    plotarLastYearGrafico(temp_yearData, "mare_alta");
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o arquivo JSON:', error);
+            });
+    }
+
 
 
     // Atualiza a imagem com base nas condições climáticas
@@ -94,26 +148,17 @@ if (apiData) {
 }
 
 
-
-
 // RAIN DATA TO HTML
 if (apiDataRain) {
-    console.log(apiDataRain)
+    //console.log(apiDataRain)
     const rain = new Rain(apiDataRain.data.values);
     console.log('Dados carregados de Chuva:', rain);
     if (window.location.pathname.includes('climate.html')) {
         document.querySelector('.rain span').textContent = `${rain.rain} mm`;
     }
-
-    if (window.location.pathname.includes('rain.html')) {
-        document.querySelector('.rain span').textContent = `${rain.rain} mm`;
-    }
-
 } else {
     console.log('Nenhum dado de Chuva no localStorage');
 }
-
-
 
 
 // // //TIDE DATA TO HTML
