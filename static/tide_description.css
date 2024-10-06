@@ -1,0 +1,105 @@
+
+.flex-climate {
+    position: relative; 
+    width: 400px;
+    height: 570px;
+    border-radius: 20px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-out;
+    background-color: aliceblue; /* Cor de fundo, opcional */
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    
+}
+
+.overlay {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 350px;
+    height: 470px;
+    border-radius: 20px;
+    background-color: rgba(238, 230, 230, 0.3); 
+    z-index: 1; 
+    transform: translate(-50%, -50%); 
+}
+
+.top-container {
+    display: flex;
+    justify-content: right;
+    margin: 40px 20px; /* Adiciona espaço acima dos botões */
+}
+
+.top-container button {
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+i {
+    font-size: 30px;
+    color: #06283D;
+}
+
+i:hover {
+    color: #9c8b8a;
+}
+
+
+.bottom-container {
+    display: grid;
+    margin-left: 10px;
+    width: 95%;
+    height: 78%;
+    border-radius: 10px;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+.weather-box img{
+    width: 60%;
+    margin-top: 10px;
+}
+
+.weather-box .temperature{
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-left: -16px;
+}
+
+.weather-box .description, .weather-box .cityname {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.tide-details {
+    width: 99%;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 colunas de tamanho igual */
+    grid-template-rows: repeat(1, 100px); /* 2 linhas de 100px de altura */
+    gap: 3px; /* Espaçamento entre os itens (opcional) */
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Cor do ícone para maré baixa */
+.fa-arrow-down {
+    color: red;
+}
+
+/* Cor do ícone para maré alta */
+.fa-arrow-up {
+    color: blue;
+}
