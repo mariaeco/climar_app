@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22303b
+}
+
+.flex-climate {
+    position: relative; 
+    width: 400px;
+    height: 570px;
+    border-radius: 20px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-out;
+    background-color: aliceblue; 
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+.top-container {
+    display: flex;
+    justify-content: right;
+    margin: 40px 20px; /* Adiciona espaço acima dos botões */
+}
+
+.top-container button {
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+i {
+    font-size: 30px;
+    color: #06283D;
+}
+
+i:hover {
+    color: #9c8b8a;
+}
+
+.bottom-container {
+    margin-left: 10px;
+    width: 95%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.chart-container {
+    margin-left: 10px;
+    width: 95%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.canvas {
+    position: relative; 
+    border: 1px solid gainsboro;
+    background-color: white;
+    z-index: 2;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+.weather-box .temperature{
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-left: -16px;
+}
+
+.weather-box .description, .weather-box .cityname {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
