@@ -85,7 +85,7 @@ if (apiData) {
         document.querySelector('.description').textContent = weather.description;
 
         // Substitua 'Tokyo' pela cidade desejada
-        let city = 'DUBAI'; 
+        let city = 'Dubai'; 
         loadJSONFile(`historic_last_year_${city}.json`)
             .then(data => {
                 localStorage.setItem('data', JSON.stringify(data));
@@ -177,7 +177,7 @@ if (apiDataTide) {
     // Seleciona o contêiner onde as marés serão exibidas para adicionar n tides de acordo com o numero de dados por dia
         const tideContainer = document.querySelector('.tide-details');
     // Verifica se está na página description.html
-    if (window.location.pathname.includes('description.html')) {
+    if (window.location.pathname.includes('tide_description.html')) {
         // Limpa o conteúdo existente no contêiner de marés
         tideContainer.innerHTML = ''; 
 

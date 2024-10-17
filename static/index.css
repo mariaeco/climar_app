@@ -14,6 +14,55 @@ body {
     background-color: #22303b;
 }
 
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.temperature-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;       /* Alinha os filhos em uma coluna */
+    align-items: center;          /* Centraliza horizontalmente */
+    text-align: center;           /* Centraliza o texto */
+}
+
+.current-weather img {
+    width: 60px;                 /* Ajuste o tamanho do ícone conforme necessário */
+    height: 60px;                /* Ajuste o tamanho do ícone conforme necessário */
+    margin-bottom: 5px;          /* Espaçamento entre o ícone e a temperatura */
+}
+
+.forecast-container {
+    display: flex;              /* Usar flexbox para as previsões */
+    justify-content: space-between; /* Espaçar uniformemente os itens */
+    margin-top: 15px;         /* Espaçamento entre clima atual e previsões */
+    min-width: 500px; 
+}
+
+.forecast-day {
+    flex: 1;                  /* Cada previsão ocupa espaço igual */
+    text-align: center;       /* Centraliza o conteúdo */
+    padding: 10px;            /* Espaçamento interno */
+}
+
+.forecast-day img {
+    width: 30px;             /* Tamanho do ícone das previsões */
+    height: 30px;            /* Tamanho do ícone das previsões */
+}
+
 .h1 {
     text-align: center;
     margin-top: 100px;

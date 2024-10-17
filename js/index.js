@@ -13,6 +13,123 @@ input.addEventListener('keypress', (event) => {
     }
 });
 
+window.onload = function () {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            
+            console.log(`Latitude: ${latitude}, Longitude: ${longitude}`); //teste pra saber se ta dando certo
+            
+            // Exemplo: Enviar para uma API de clima (remova o comentário e adicione sua função se necessário)
+            fetchWeatherDataLocal(latitude, longitude);
+        }, function (error) {
+            console.error("Erro para obter a localização: ", error);
+        });
+    } else {
+        console.log("Erro no navegador.");
+    }
+};
+
+function fetchWeatherDataLocal(lat, lon) {
+    const apiKey = 'KEY';
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            //Pegando os dados locais
+            const currentWeather = data.list[0];
+            const temperature = currentWeather.main.temp;
+            const iconCode = currentWeather.weather[0].icon;
+            const iconUrl = `static/icons/${iconCode}.png`;
+
+            const tempLocal = document.getElementById('temperature');
+            const iconClima = document.getElementById('weather-icon');
+
+            if (tempLocal && iconClima) {
+                iconClima.src = iconUrl;
+                iconClima.style.display = 'inline';
+                tempLocal.innerText = `${temperature}°C`;
+            } else {
+                console.error('Elemento não encontrado no DOM.');
+            }
+            //chamando as funções para previsões
+            const dailyTemperatures = getDailyTemperatures(data.list);
+            renderForecast(dailyTemperatures);
+        })
+        .catch(error => {
+            console.error("Erro ao buscar os dados de clima:", error);
+            document.getElementById('temperature').innerText = "Unable to fetch temperature";
+        });
+}
+
+//função para pegar as máximas e minimas de cada dia
+function getDailyTemperatures(forecastList) {
+    const dailyTemperatures = {};
+
+    forecastList.forEach(forecast => {
+        const date = new Date(forecast.dt * 1000);
+        const day = date.toLocaleDateString('pt-BR')
+        
+        //se ainda não tem dados para aquele dia pega a primeira
+        if (!dailyTemperatures[day]) {
+            dailyTemperatures[day] = {
+                temp_min: forecast.main.temp_min,
+                temp_max: forecast.main.temp_max,
+                icon: null,
+                weekday: date.toLocaleDateString('pt-BR', { weekday: 'short' })
+            };
+        } else { //compara os dados guardados com os novos
+            dailyTemperatures[day].temp_min = Math.min(dailyTemperatures[day].temp_min, forecast.main.temp_min);
+            dailyTemperatures[day].temp_max = Math.max(dailyTemperatures[day].temp_max, forecast.main.temp_max);
+        }
+
+        //para não ficar muito complexo optei em pegar o icone do meio dia
+        if (date.getHours() === 12) {
+            dailyTemperatures[day].icon = forecast.weather[0].icon;
+        }
+    });
+
+    return dailyTemperatures;
+}
+
+//função para pegar as previsões no arquivo
+function renderForecast(dailyTemperatures) {
+    const forecastContainer = document.getElementById('forecast-container');
+    forecastContainer.innerHTML = '';
+
+    const days = Object.keys(dailyTemperatures);
+
+    //optamos para mostrar apenas as informações dos próximos 4 dias
+    for (let i = 1; i <= 4; i++) {//for para pegar apenas dos 4 dias seguintes
+        const day = days[i];
+        if (!day) break;
+
+        const tempMin = Math.round(dailyTemperatures[day].temp_min);
+        const tempMax = Math.round(dailyTemperatures[day].temp_max);
+        const iconCode = dailyTemperatures[day].icon;
+        const iconUrl = `static/icons/${iconCode}.png`;
+        const weekday = dailyTemperatures[day].weekday;
+
+        //reduzindo a informação da data para apenas DD/MM
+        const dateParts = day.split('/');
+        const dayMonth = `${dateParts[0]}/${dateParts[1]}`;
+
+        const dayHTML = `
+            <div class="forecast-day">
+                <h4>${weekday}, ${dayMonth}</h4> <!-- Exibe o dia da semana e o dia/mês -->
+                <img class="icon" src="${iconUrl}" alt="Weather icon">
+                <p><span class="temp-min">${tempMin}°C</span> <span class="temp-max">${tempMax}°C</span></p>
+            </div>
+        `;
+
+        forecastContainer.innerHTML += dayHTML;
+    }
+}
+
+
 function fetchWeatherData() {
     const city = document.querySelector('.search-box input').value;
     const apiKey = 'KEY';
