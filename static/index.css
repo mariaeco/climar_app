@@ -14,6 +14,23 @@ body {
     background-color: #22303b;
 }
 
+.login-button {
+    position: absolute;
+    font-size: 16px;
+    top: 20px;
+    right: 20px;
+    background-color: #ace482;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #c2e0ae;
+}
+
 #temperature {
     font-size: 24px;
     font-weight: bold;
@@ -21,7 +38,7 @@ body {
 
 .temperature-box {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     background-color: white;
     padding: 10px;
@@ -34,33 +51,33 @@ body {
 
 .current-weather {
     display: flex;
-    flex-direction: column;       /* Alinha os filhos em uma coluna */
-    align-items: center;          /* Centraliza horizontalmente */
-    text-align: center;           /* Centraliza o texto */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .current-weather img {
-    width: 60px;                 /* Ajuste o tamanho do ícone conforme necessário */
-    height: 60px;                /* Ajuste o tamanho do ícone conforme necessário */
-    margin-bottom: 5px;          /* Espaçamento entre o ícone e a temperatura */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
 }
 
 .forecast-container {
-    display: flex;              /* Usar flexbox para as previsões */
-    justify-content: space-between; /* Espaçar uniformemente os itens */
-    margin-top: 15px;         /* Espaçamento entre clima atual e previsões */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
     min-width: 500px; 
 }
 
 .forecast-day {
-    flex: 1;                  /* Cada previsão ocupa espaço igual */
-    text-align: center;       /* Centraliza o conteúdo */
-    padding: 10px;            /* Espaçamento interno */
+    flex: 1;
+    text-align: center;
+    padding: 10px;
 }
 
 .forecast-day img {
-    width: 30px;             /* Tamanho do ícone das previsões */
-    height: 30px;            /* Tamanho do ícone das previsões */
+    width: 30px;
+    height: 30px;
 }
 
 .h1 {

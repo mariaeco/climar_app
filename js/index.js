@@ -1,16 +1,11 @@
-
 const search = document.querySelector('.search-box button');
 search.addEventListener('click', () => {
     fetchWeatherData();
     //window.location.href = 'climate.html';
 });
 
-const input = document.querySelector('.search-box input');
-input.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-        fetchWeatherData();
-        // window.location.href = 'climate.html';
-    }
+document.getElementById('loginBtn').addEventListener('click', function() {
+    window.location.href = 'login.html';
 });
 
 window.onload = function () {
