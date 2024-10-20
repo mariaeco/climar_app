@@ -15,3 +15,5 @@ npm install chart
 npm install dotenv
 
 npm install jsdom 
+
+npm install mysql2
