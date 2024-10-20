@@ -17,3 +17,5 @@ npm install dotenv
 npm install jsdom 
 
 npm install mysql2
+
+npm install express body-parser bcryptjs
