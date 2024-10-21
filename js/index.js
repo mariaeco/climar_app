@@ -1,4 +1,4 @@
-import { openweatherKEY, stormKEY, tomorowwKEY } from './keys.js'; 
+import { openweatherKEY, stormKEY, tomorowKEY } from './keys.js'; 
 import { fetchFraseAleatoria } from './functions.js';
 
 //using click
@@ -232,7 +232,7 @@ function fetchWeatherData() {
 
 function fetchPrecpData(city){
     const options = {method: 'GET', headers: {accept: 'application/json'}};
-    const key = tomorowwKEY
+    const key = tomorowKEY
     fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${key}`, options)
     .then(response => response.json())
     .then(data => {

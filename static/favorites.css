@@ -116,6 +116,7 @@ tbody tr td.acao {
 }
 
 .fav-city {
+  cursor: pointer;
   text-decoration: none; /* Remove o sublinhado */
   color: black;
 }
