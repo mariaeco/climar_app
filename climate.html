@@ -23,7 +23,7 @@
                     <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </a>
                 <a id="fav" class="favorite" href="favorites.html">
-                    <button"><i class='bx bxs-heart'></i></button>
+                    <button id="fav-button"><i class="fa-solid fa-plus"></i></button>
                 </a>
             </div>
 
@@ -78,6 +78,17 @@
     </section>
 
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script>
+
+        const favbutton = document.querySelector('#fav-button');
+        favbutton.addEventListener('click', function (event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            sessionStorage.setItem('origin', 'climate.html');
+            // Redireciona para a página de favoritos
+            window.location.href = 'favorites.html';
+
+        });
+    </script>
 
 
     <script type="module" src="js/climate.js"></script>

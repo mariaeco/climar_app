@@ -29,7 +29,11 @@
         </div>
     </section>
 
-    <button class="login-button" id="loginBtn">LOGIN</button>
+
+    <!-- <button class="login-button">ENTRAR</i></button> -->
+    <a id="fav" class="favorite" href="favorites.html">
+        <button id="fav-button"><i class="fa-solid fa-plus"></i></button>
+    </a>
 
     <div class="temperature-box">
         <span id="city">Dados locais:</span>
@@ -42,6 +46,17 @@
     </div>
 
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        //- preciso aqui apenas  guardar a localizacao para usar no arquivo favoritos.js pois preciso puxar os dados vindos daqui
+        const favbutton = document.querySelector('#fav-button');
+        favbutton.addEventListener('click', function (event) {
+            event.preventDefault(); // Previne o comportamento padrão do link
+            sessionStorage.setItem('origin', 'index.html');
+            // Redireciona para a página de favoritos
+        });
+    </script>
 
     <script type="module" src="js/index.js"></script>
 </body>

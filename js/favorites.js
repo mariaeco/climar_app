@@ -1,95 +1,107 @@
+import { fetchWeatherData } from './fetch_fav.js';
 
-const apiData = JSON.parse(localStorage.getItem('apiData'));
 
-const sCity = apiData.name
-const sLat = apiData.coord.lat
-const sLon = apiData.coord.lon
+const datafav = JSON.parse(localStorage.getItem('apiData')); // Dados da página index
+const datalocal = JSON.parse(localStorage.getItem('apiDataAtualLocation')); // Dados da página climate
 
-console.log(sCity)
+const origin = sessionStorage.getItem('origin'); // Obtém a origem armazenada
 
-const modal = document.querySelector('.modal-container')
+let apiData; // Declare a variável antes do bloco condicional
+
+if (origin === "climate.html") { // Verifique se a origem é "index" (não inclua ".html")
+    apiData = datafav; // Atribua os dados da página index
+} else if (origin === "index.html") { // Verifique se a origem é "climate" (não inclua ".html")
+    apiData = datalocal; // Atribua os dados da página climate
+}
+
+const sCity = apiData.name;      // Nome da cidade
+const sLat = apiData.coord.lat;  // Latitude
+const sLon = apiData.coord.lon;  // Longitude
+
+
+
+
+
+
 const tbody = document.querySelector('tbody')
-const btnSalvar = document.querySelector('#btnSalvar')
+
 
 let itens
 let id
 
-function openModal(edit = false, index = 0) {
-  modal.classList.add('active')
-
-  modal.onclick = e => {
-    if (e.target.className.indexOf('modal-container') !== -1) {
-      modal.classList.remove('active')
-    }
+function insertItem(item, index) {
+    let tr = document.createElement('tr');
+    
+    tr.innerHTML = `
+      <td><a class="fav-city">${item.city}</a></td>
+      <td class="acao">
+        <button class="delete-btn" data-index="${index}"><i class='bx bx-trash'></i></button>
+      </td>
+    `;
+    tbody.appendChild(tr);
   }
+  
+  // Adicione o event listener para os botões de delete
+tbody.addEventListener('click', (event) => {
+    if (event.target.closest('.delete-btn')) {
+      const index = event.target.closest('.delete-btn').dataset.index;
+      deleteItem(index);
+    }
+  });
 
-  if (edit) {
-    sCity = itens[index].city
-    sLat = itens[index].lat
-    sLon.value = itens[index].lon
-    id = index
-  } 
-}
-
-function editItem(index) {
-
-  openModal(true, index)
-}
 
 function deleteItem(index) {
-  itens.splice(index, 1)
-  setItensBD()
-  loadItens()
-}
-
-function insertItem(item, index) {
-  let tr = document.createElement('tr')
-
-  tr.innerHTML = `
-    <td>${item.city}</td>
-    <td class="acao">
-      <button onclick="editItem(${index})"><i class='bx bx-edit' ></i></button>
-    </td>
-    <td class="acao">
-      <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
-    </td>
-  `
-  tbody.appendChild(tr)
-}
-
-btnSalvar.onclick = e => {
-  
-  if (sCity == '' || sLat == '' || sLon == '') {
-    return
+    itens = getItensBD(); // Certifique-se de pegar a lista atualizada
+    itens.splice(index, 1); // Remove o item no índice especificado
+    setItensBD(); // Salva as alterações
+    loadItens(); // Atualiza a tabela
   }
 
-  e.preventDefault();
-
-  if (id !== undefined) {
-    itens[id].city = sCity
-    itens[id].lat = sLat
-    itens[id].lon = sLon
-  } else {
-    itens.push({'city': sCity, 'lat':sLat, 'lon': sLon})
-  }
-
-  setItensBD()
-
-  modal.classList.remove('active')
-  loadItens()
-  id = undefined
-}
 
 function loadItens() {
-  itens = getItensBD()
-  tbody.innerHTML = ''
-  itens.forEach((item, index) => {
-    insertItem(item, index)
-  })
-
+    
+    itens = getItensBD()
+  
+    tbody.innerHTML = ''
+    itens.forEach((item, index) => {
+        insertItem(item, index)
+    })
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const favLinks = document.querySelectorAll('.fav-city');
+
+    favLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+
+            const city = link.textContent; // Obtém o nome da cidade do link
+            fetchWeatherData(city); // Chama a função FETCHTEMPO com o nome da cidade
+
+            // Aqui você pode redirecionar para a página do clima, se necessário
+            setTimeout(() => {
+                window.location.href = 'climate.html'; // Redireciona para a página do clima após um pequeno atraso
+            }, 1000); // Ajuste o tempo conforme necessário (em milissegundos)
+        });
+    });
+});
+
+
+
 
 const getItensBD = () => JSON.parse(localStorage.getItem('dbfavorites')) ?? []
 const setItensBD = () => localStorage.setItem('dbfavorites', JSON.stringify(itens))
 
+
+// Adiciona o item da API à lista de favoritos e carrega os itens
+if (!getItensBD().some(item => item.city === sCity)) {
+    itens = getItensBD();
+    itens.push({ 'city': sCity, 'lat': sLat, 'lon': sLon });
+    setItensBD();
+}
+
 loadItens()
+
+

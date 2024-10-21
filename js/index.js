@@ -1,3 +1,4 @@
+import { openweatherKEY, stormKEY, tomorowwKEY } from './keys.js'; 
 import { fetchFraseAleatoria } from './functions.js';
 
 //using click
@@ -16,11 +17,12 @@ searchBoxInput.addEventListener('keypress', (event) => {
 });
 
 
-document.getElementById('loginBtn').addEventListener('click', function() {
-    window.location.href = 'login.html';
-});
+// document.getElementById('loginBtn').addEventListener('click', function() {
+//     window.location.href = 'login.html';
+// });
 
-
+let latitude // declarando elas aqui para poder pegar abaixo
+let longitude
 //to get location
 window.onload = function () {
     if (navigator.geolocation) {
@@ -28,11 +30,12 @@ window.onload = function () {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
 
-            
-            console.log(`Latitude: ${latitude}, Longitude: ${longitude}`); //teste pra saber se ta dando certo
-            
+            console.log("Localização atual:",`Latitude: ${latitude}, Longitude: ${longitude}`); //teste pra saber se ta dando certo
+           
             // Exemplo: Enviar para uma API de clima (remova o comentário e adicione sua função se necessário)
             fetchWeatherDataLocal(latitude, longitude);
+            
+
         }, function (error) {
             console.error("Erro para obter a localização: ", error);
         });
@@ -41,18 +44,57 @@ window.onload = function () {
     }
 };
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 74f4dd5da4f849edd869ca3633aa4a8528cb45fc
+const favbutton = document.querySelector('#fav-button');
+favbutton.addEventListener('click', function() {
+    addLocalFav(latitude, longitude); // Certifique-se que latitude e longitude estão definidos
+    window.location.href = 'favorites.html';
+});
+
+
+// caso queira adicionar a localiacao atual
+function addLocalFav(){
+    const apiKey = openweatherKEY;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+
+
+            const sCity = data.city.name;         // Nome da cidade
+            const sLat = data.city.coord.lat;     // Latitude
+            const sLon = data.city.coord.lon;     // Longitude
+
+            // Criando um objeto com as informações
+            const datalocal = {
+                name: sCity,
+                coord: {
+                    lat: sLat,
+                    lon: sLon
+                }
+            };
+
+            localStorage.setItem('apiDataAtualLocation', JSON.stringify(datalocal))
+
+        })
+        .catch(error => {
+            console.error("Erro ao buscar os dados de clima:", error);
+            document.getElementById('temperature').innerText = "Unable to fetch temperature";
+        });
+}
+
+
+
 function fetchWeatherDataLocal(lat, lon) {
-    const apiKey = 'KEY';
+    const apiKey = openweatherKEY;
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
             //Pegando os dados locais
+            
             const currentWeather = data.list[0];
             const temperature = currentWeather.main.temp;
             const iconCode = currentWeather.weather[0].icon;
@@ -165,7 +207,7 @@ function renderForecast(dailyTemperatures) {
 
 function fetchWeatherData() {
     const city = document.querySelector('.search-box input').value;
-    const apiKey = 'KEY';
+    const apiKey = openweatherKEY;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     fetch(apiUrl)
@@ -190,7 +232,7 @@ function fetchWeatherData() {
 
 function fetchPrecpData(city){
     const options = {method: 'GET', headers: {accept: 'application/json'}};
-    const key = '5FrByyB0d2bKH22QdKfkH84ndokNjf5t'
+    const key = tomorowwKEY
     fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${key}`, options)
     .then(response => response.json())
     .then(data => {
@@ -203,15 +245,6 @@ function fetchPrecpData(city){
 }
 
 
-// const fetch = require('node-fetch');
-
-// const url = 'https://api.tomorrow.io/v4/weather/realtime?location=toronto&apikey=5FrByyB0d2bKH22QdKfkH84ndokNjf5t';
-// const options = {method: 'GET', headers: {accept: 'application/json'}};
-
-// fetch(url, options)
-//   .then(res => res.json())
-//   .then(json => console.log(json))
-//   .catch(err => console.error('error:' + err));
 
 function fetchTideData(lat, lng) {
     const today = new Date();
@@ -223,7 +256,7 @@ function fetchTideData(lat, lng) {
 
     fetch(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${yesterdayISO}&end=${todayISO}`, {
         headers: {
-            'Authorization': 'key'//'ec3f2ef6-81cd-11ef-a0d5-0242ac130003-ec3f2f5a-81cd-11ef-a0d5-0242ac130003'
+            'Authorization': stormKEY//'ec3f2ef6-81cd-11ef-a0d5-0242ac130003-ec3f2f5a-81cd-11ef-a0d5-0242ac130003'
         }
     })
     .then((response) => response.json())

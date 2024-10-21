@@ -223,7 +223,6 @@ function getRandomFloat(rain) {
 
 // RAIN DATA TO HTML
 if (apiDataRain) {
-    //console.log(apiDataRain)
     const rain = new Rain(apiDataRain.data.values);
     const weather = new Weather(apiData); //fazendo uma bagunca aqui para mostrar os dados de chuva, pois a app é paga
     console.log('Dados carregados de Chuva:', rain);

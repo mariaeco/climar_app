@@ -29,3 +29,4 @@ logs
 package.json
 package-lock.json
 keys.txt
+js/keys.js

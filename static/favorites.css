@@ -22,7 +22,7 @@ button {
 
 .container {
   position: relative; 
-  width: 500px;
+  width: 400px;
   height: 600px;
   border-radius: 20px;
   background: white;
@@ -113,6 +113,19 @@ thead tr th.acao {
 
 tbody tr td.acao {
   text-align: center;
+}
+
+.fav-city {
+  text-decoration: none; /* Remove o sublinhado */
+  color: black;
+}
+
+.fav-city:hover {
+  color: #3498db;
+}
+
+.acao i:hover{
+  color: #3498db;;
 }
 
 @media (max-width: 700px) {
