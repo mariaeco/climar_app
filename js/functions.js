@@ -41,3 +41,18 @@ export function loadJSONFile(fileName) {
             throw error;
         });
 }
+
+
+export function fetchFraseAleatoria(clima) {
+    return fetch('js/frases.json') // Caminho do arquivo JSON
+        .then(response => response.json())
+        .then(data => {
+            const frases = data[clima];
+            const indiceAleatorio = Math.floor(Math.random() * frases.length); // Seleciona um índice aleatório
+            return frases[indiceAleatorio]; // Retorna a frase aleatória
+        })
+        .catch(error => {
+            console.error("Erro ao carregar as frases: ", error);
+            return "Temperatura alta! Mantenha-se hidratado."; // Frase padrão em caso de erro
+        });
+}

@@ -1,8 +1,11 @@
+import { fetchFraseAleatoria } from './functions.js';
+
 const search = document.querySelector('.search-box button');
 search.addEventListener('click', () => {
     fetchWeatherData();
     //window.location.href = 'climate.html';
 });
+
 
 document.getElementById('loginBtn').addEventListener('click', function() {
     window.location.href = 'login.html';
@@ -27,8 +30,10 @@ window.onload = function () {
     }
 };
 
+
+
 function fetchWeatherDataLocal(lat, lon) {
-    const apiKey = 'KEY';
+    const apiKey = '913e09abfd41193137ebf0c76bc8227f';
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -39,9 +44,29 @@ function fetchWeatherDataLocal(lat, lon) {
             const temperature = currentWeather.main.temp;
             const iconCode = currentWeather.weather[0].icon;
             const iconUrl = `static/icons/${iconCode}.png`;
-
+            
+            
             const tempLocal = document.getElementById('temperature');
             const iconClima = document.getElementById('weather-icon');
+            const warning = document.querySelector('.warning-message'); // adicionando o warning
+
+            //NEW
+            warning.classList.remove('warning-hot', 'warning-cold'); 
+            if (temperature > 25) {  // Verifica se a velocidade é maior que 10 Km/h
+                fetchFraseAleatoria("calor").then(fraseAleatoria => {
+                    warning.innerHTML = fraseAleatoria;
+                    warning.style.display = 'block';  // Exibe a mensagem
+                    warning.classList.add('warning-hot'); 
+                });
+            }
+            if (temperature < 10) {  // Verifica se a velocidade é maior que 10 Km/h
+                fetchFraseAleatoria("frio").then(fraseAleatoria => {
+                    warning.innerHTML = fraseAleatoria;
+                    warning.style.display = 'block';  // Exibe a mensagem
+                    warning.classList.add('warning-cold'); 
+                });
+            }
+
 
             if (tempLocal && iconClima) {
                 iconClima.src = iconUrl;
@@ -127,7 +152,7 @@ function renderForecast(dailyTemperatures) {
 
 function fetchWeatherData() {
     const city = document.querySelector('.search-box input').value;
-    const apiKey = 'KEY';
+    const apiKey = '913e09abfd41193137ebf0c76bc8227f';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     fetch(apiUrl)

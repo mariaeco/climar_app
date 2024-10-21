@@ -1,6 +1,7 @@
 import { Weather, Rain, Tide} from './classes.js';
-import { downloadJSON, loadJSONFile } from './functions.js';
+import { downloadJSON, loadJSONFile, fetchFraseAleatoria } from './functions.js';
 import { plotarGrafico, plotarLastYearGrafico } from './plots.js';
+
 
 // // Recupera os dados armazenados no localStorage 
 const apiData = JSON.parse(localStorage.getItem('apiData'));
@@ -63,6 +64,88 @@ if (apiData) {
         document.querySelector('.description').textContent = weather.description;
     }
 
+    // Atualiza a imagem com base nas condições climáticas
+    const weatherCondition = apiData.weather[0].main;
+    const warning = document.querySelector('.warning-message'); // adicionando o warning
+
+    let image = '';
+    let backgroundImage = '';
+    switch (weatherCondition) {
+        case 'Clear':
+            backgroundImage = "url('/static/images/clear.jpg')";
+            break;
+        case 'Rain':
+            backgroundImage = "url('/static/images/rain.jpg')";
+            break;
+        case 'Drizzle':
+                backgroundImage = "url('/static/images/rain.jpg')";
+            break;
+        case 'Snow':
+            backgroundImage = "url('/static/images/snow.jpg')";
+            fetchFraseAleatoria("neve").then(fraseAleatoria => {
+                warning.innerHTML = fraseAleatoria;
+                warning.style.display = 'block';  // Exibe a mensagem
+            });
+            break;
+        case 'Clouds':
+            backgroundImage = "url('/static/images/cloud.jpg')";
+            break;
+        case 'Haze':
+            backgroundImage = "url('/static/images/mist.jpg')";
+            break;
+        case 'Fog':
+                backgroundImage = "url('/static/images/fog.jpg')";
+                fetchFraseAleatoria("nevoa").then(fraseAleatoria => {
+                    warning.innerHTML = fraseAleatoria;
+                    warning.style.display = 'block';  // Exibe a mensagem
+                });
+            break;
+        case 'Thundestorm':
+                backgroundImage = "url('/static/images/thundestorm.jpg')";
+                fetchFraseAleatoria("trovoada").then(fraseAleatoria => {
+                    warning.innerHTML = fraseAleatoria;
+                    warning.style.display = 'block';  // Exibe a mensagem
+                });
+            break;
+        default:
+            image = 'static/images/default.png'; // Imagem padrão para condições desconhecidas
+    }
+    // Define o background do container específico
+    document.querySelector('.flex-climate').style.backgroundImage = backgroundImage; // Mudança aqui
+
+    //NEW
+    if (weather.temperature > 28) {  // Verifica se a velocidade é maior que 10 Km/h
+        fetchFraseAleatoria("calor").then(fraseAleatoria => {
+            warning.innerHTML = fraseAleatoria;
+            warning.style.display = 'block';  // Exibe a mensagem
+            warning.classList.add('warning-hot'); 
+        });
+    }
+    if (weather.temperature < 10) {  // Verifica se a velocidade é maior que 10 Km/h
+        fetchFraseAleatoria("frio").then(fraseAleatoria => {
+            warning.innerHTML = fraseAleatoria;
+            warning.style.display = 'block';  // Exibe a mensagem
+            warning.classList.add('warning-cold'); 
+        });
+    }
+    if (weather.temperature >15 && weather.temperature <20) {  // Verifica se a velocidade é maior que 10 Km/h
+        fetchFraseAleatoria("ameno").then(fraseAleatoria => {
+            warning.innerHTML = fraseAleatoria;
+            warning.style.display = 'block';  // Exibe a mensagem
+            warning.classList.add('warning-cold'); 
+        });
+    }
+    if (weather.temperature >15 && weather.temperature <20) {  // Verifica se a velocidade é maior que 10 Km/h
+        fetchFraseAleatoria("ameno").then(fraseAleatoria => {
+            warning.innerHTML = fraseAleatoria;
+            warning.style.display = 'block';  // Exibe a mensagem
+            warning.classList.add('warning-cold'); 
+        });
+    }
+
+
+
+
     //INCLUINDO AQUI OS DADOS HISTÓRICOS DE TEMPERATURA, VC PODE MUDAR A CIDADE ABAIXO - 
     //OS DADOS ESTAO ARMAZENADOS NA PASTA DE DADOS
     //SAO DADOS CRIADOS POIS OS HISTÓRICOS SÃO PAGOS
@@ -113,36 +196,6 @@ if (apiData) {
                 console.error('Erro ao carregar o arquivo JSON:', error);
             });
     }
-
-
-
-    // Atualiza a imagem com base nas condições climáticas
-    const weatherCondition = apiData.weather[0].main;
-    let image = '';
-    let backgroundImage = '';
-    switch (weatherCondition) {
-        case 'Clear':
-            backgroundImage = "url('/static/images/clear.jpg')";
-            break;
-        case 'Rain':
-            backgroundImage = "url('/static/images/rain.jpg')";
-            break;
-        case 'Snow':
-            backgroundImage = "url('/static/images/snow.jpg')";
-            break;
-        case 'Clouds':
-            backgroundImage = "url('/static/images/cloud.jpg')";
-            break;
-        case 'Haze':
-            backgroundImage = "url('/static/images/mist.jpg')";
-            break;
-        default:
-            image = 'static/images/default.png'; // Imagem padrão para condições desconhecidas
-    }
-    
-    // Define o background do container específico
-    document.querySelector('.flex-climate').style.backgroundImage = backgroundImage; // Mudança aqui
-
 } else {
     console.log('Nenhum dado de Clima no localStorage');
 }

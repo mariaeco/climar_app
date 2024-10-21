@@ -1,0 +1,76 @@
+{
+  "calor": [
+    "Temperatura elevada! Tome medidas para se refrescar.",
+    "O calor hoje está de lascar. Tome água!",
+    "Tá tão quente que dá pra fritar ovo no asfalto. Cuidado!",
+    "O sol está derretendo tudo hoje.",
+    "Que calor insuportável! Não dá para ficar sem um ventilador.",
+    "Tá tão quente que até a sombra tá quente.",
+    "Sol de rachar o coco, não dá pra sair sem protetor.",
+    "Hoje o ar tá pegando fogo, cuidado com a desidratação.",
+    "Está tão quente que vi uma galinha botando ovo cozido!"
+  ],
+  "frio": [
+    "Está um frio de rachar.",
+    "Hoje está um gelo.",
+    "Que friozinho…",
+    "Que friagem, dá até pra ver o bafo.",
+    "Hoje tá de bater queixo.",
+    "Está um frio cortante, de doer os ossos.",
+    "Hoje está bom para ficar debaixo das cobertas.",
+    "Que ventinho gelado, congela até a alma!",
+    "Tá gelado, parece que estamos no polo norte.",
+    "Hoje o frio tá cortante, dá até vontade de hibernar.",
+    "O frio está de lascar, nem as luvas estão dando conta.",
+    "O dia pede um casaco pesado e uma bebida quente.",
+    "Brrrr... que friaca de fazer o nariz congelar!",
+    "Está tão frio que tenho certeza de que os pinguins estão se mudando!",
+    "Está mais frio que o coração da minha ex lá fora!",
+    "Está tão frio que vi um urso polar de casaco",
+    "Preciso de um chocolate quente só para sobreviver a esse clima!",
+    "Está tão frio que estou usando meu gato como uma bolsa de água quente!"
+    ],
+  "ameno": [
+    "Clima perfeito para sair de casa!",
+    "Aproveite, saia com os amigos e tome uma cerveja! O clima está bom!"
+  ],
+  "trovoada": [
+    "As trovoadas estão chegando, melhor se preparar para a chuva forte.",
+    "Ouviu isso? O trovão está cada vez mais perto.",
+    "O céu está ribombando com essas trovoadas.",
+    "As trovoadas estão assustadoras, os trovões estão estremecendo tudo.",
+    "O barulho das trovoadas anuncia uma tempestade pesada.",
+    "As trovoadas estão tão intensas que dá pra sentir o chão tremer.",
+    "O som dos trovões está ecoando forte, a chuva vem com tudo.",
+    "Os raios iluminam o céu e as trovoadas não param.",
+    "Parece que o céu vai desabar com essas trovoadas.",
+    "As trovoadas são de arrepiar, parece que a tempestade está sobre nós.",
+    "Aqui está chovendo e repangalejando.",
+    "Olha o relampio!",
+    "Vai relampiar!",
+    "Se eu quisesse ouvir tanto barulho, eu ia passar tempo com a minha família!",
+    "É só eu ou o trovão soa como o estômago do céu roncando?"
+  ],
+  "nevoa": [
+    "A névoa está tão densa que mal dá para enxergar à frente.",
+    "O dia amanheceu coberto por uma névoa suave.",
+    "A névoa está baixa, parece que estamos andando nas nuvens.",
+    "A névoa tomou conta da cidade, tudo está encoberto.",
+    "A visibilidade está reduzida por causa dessa névoa pesada.",
+    "A névoa traz um clima misterioso, quase não dá pra ver o horizonte.",
+    "O caminho está encoberto pela névoa, é melhor ter cuidado ao dirigir."
+  ],
+  "neve": [
+    "Está começando a nevar, que espetáculo!",
+    "Os flocos de neve estão caindo suavemente, o cenário tá lindo.",
+    "Que dia maravilhoso, a neve está cobrindo tudo!",
+    "Está nevando levemente, parece cena de filme.",
+    "A neve está formando um tapete branco, que paisagem incrível.",
+    "Olha só a neve caindo, parece que tudo está congelando aos poucos.",
+    "A neve está começando a acumular no chão, vai ser divertido.",
+    "Uma leve camada de neve já cobre os telhados.",
+    "Os primeiros flocos de neve estão caindo, inverno finalmente chegou.",
+    "Está nevando de leve, perfeito para sair e brincar."
+  ]
+}
+

@@ -148,4 +148,29 @@ a {
     color: rgb(55, 53, 177); 
 }
 
+.warning-message {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixa o alerta na tela, mesmo ao rolar a página */
+    top: 20px; /* Localização no topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o alinhamento ao centro */
+    padding: 15px 30px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-size: 16px; /* Tamanho da fonte */
+    z-index: 1000; /* Para garantir que o alerta fique acima de outros elementos */
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffcc00; /* Cor para calor */
+    color: #333; /* Cor do texto (preto) */
+    text-align: center;
+}
 
+.warning-hot {
+    background-color: #ffcc00; /* Cor para calor */
+    color: #333; /* Cor do texto (preto) */
+}
+
+.warning-cold {
+    background-color: #007bff; /* Cor para frio */
+    color: white; /* Cor do texto (preto) */
+}
