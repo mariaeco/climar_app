@@ -30,10 +30,8 @@ window.onload = function () {
     }
 };
 
-
-
 function fetchWeatherDataLocal(lat, lon) {
-    const apiKey = '913e09abfd41193137ebf0c76bc8227f';
+    const apiKey = 'KEY';
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -152,7 +150,7 @@ function renderForecast(dailyTemperatures) {
 
 function fetchWeatherData() {
     const city = document.querySelector('.search-box input').value;
-    const apiKey = '913e09abfd41193137ebf0c76bc8227f';
+    const apiKey = 'KEY';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     fetch(apiUrl)
