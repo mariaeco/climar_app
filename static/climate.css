@@ -59,9 +59,8 @@ i {
 }
 
 i:hover {
-    color: #9c8b8a;
+    color: #ace482;
 }
-
 
 .bottom-container {
     display: grid;
@@ -94,6 +93,10 @@ i:hover {
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
+}
+
+.weather-box:hover p {
+    color: #000000;
 }
 
 .weather-details {
@@ -141,11 +144,11 @@ a {
 }
 
 .text:hover p, .text:hover span{
-    color: rgb(55, 53, 177); 
+    color:  #542a70;
 }
 
 .tide .text:hover p, .tide .text:hover span  {
-    color: rgb(55, 53, 177); 
+    color:  #542a70;
 }
 
 .warning-message {

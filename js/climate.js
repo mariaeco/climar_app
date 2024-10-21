@@ -65,7 +65,7 @@ if (apiData) {
     }
 
     // Atualiza a imagem com base nas condições climáticas
-    const weatherCondition = apiData.weather[0].main;
+    const weatherCondition = weather.main;
     const warning = document.querySelector('.warning-message'); // adicionando o warning
 
     let image = '';
@@ -78,8 +78,11 @@ if (apiData) {
             backgroundImage = "url('/static/images/rain.jpg')";
             break;
         case 'Drizzle':
-                backgroundImage = "url('/static/images/rain.jpg')";
+            backgroundImage = "url('/static/images/rain.jpg')";
             break;
+        case 'Mist':
+            backgroundImage = "url('/static/images/mist.jpg')";
+        break;
         case 'Snow':
             backgroundImage = "url('/static/images/snow.jpg')";
             fetchFraseAleatoria("neve").then(fraseAleatoria => {
@@ -143,9 +146,6 @@ if (apiData) {
         });
     }
 
-
-
-
     //INCLUINDO AQUI OS DADOS HISTÓRICOS DE TEMPERATURA, VC PODE MUDAR A CIDADE ABAIXO - 
     //OS DADOS ESTAO ARMAZENADOS NA PASTA DE DADOS
     //SAO DADOS CRIADOS POIS OS HISTÓRICOS SÃO PAGOS
@@ -200,14 +200,37 @@ if (apiData) {
     console.log('Nenhum dado de Clima no localStorage');
 }
 
+//para gerar vaalores aleatorios de chuva ja que a api não me dá de graça
+function getRandomFloat(rain) {
+    let raindescripton = rain
+    if (raindescripton=="light rain"){
+        let randomFloat = Math.random() * 5;
+        return randomFloat.toFixed(1); 
+    }
+    if (raindescripton=="moderate rain"){
+        let randomFloat = Math.random() * (15 - 6) + 6; 
+        return randomFloat.toFixed(1); 
+        
+    }
+    else{
+        let randomFloat = Math.random() * (50 - 15) + 15; 
+    }
+    return randomFloat.toFixed(1); 
+}
 
 // RAIN DATA TO HTML
 if (apiDataRain) {
     //console.log(apiDataRain)
     const rain = new Rain(apiDataRain.data.values);
+    const weather = new Weather(apiData); //fazendo uma bagunca aqui para mostrar os dados de chuva, pois a app é paga
     console.log('Dados carregados de Chuva:', rain);
     if (window.location.pathname.includes('climate.html')) {
-        document.querySelector('.rain span').textContent = `${rain.rain} mm`;
+        if (weather.main=="Rain"){
+            document.querySelector('.rain span').textContent = `${ getRandomFloat(weather.description)} mm`;
+        }
+        else{
+            document.querySelector('.rain span').textContent = `${rain.rain} mm`;
+        }
     }
 } else {
     console.log('Nenhum dado de Chuva no localStorage');
@@ -272,6 +295,5 @@ if (apiDataTide) {
 } else {
     console.log('Nenhum dado de maré no localStorage');
 }
-
 
 //localStorage.clear();

@@ -1,5 +1,3 @@
-
-
 //CLASSE WEATHER
 export class Weather {
     constructor(weather) {
@@ -8,6 +6,7 @@ export class Weather {
         this.humidity = weather.main.humidity;
         this.wind = weather.wind.speed;
         this.description = weather.weather[0].description;
+        this.main = weather.weather[0].main;
     }
 
     // Método para formatar os dados do clima para exibição
@@ -20,7 +19,6 @@ export class Rain {
     constructor(rain) {
         this.rain = rain.rainIntensity;
         this.probRain = rain.precipitationProbability;
-
     }
 
     // Método para formatar os dados do clima para exibição

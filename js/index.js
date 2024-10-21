@@ -1,9 +1,18 @@
 import { fetchFraseAleatoria } from './functions.js';
 
+//using click
 const search = document.querySelector('.search-box button');
 search.addEventListener('click', () => {
     fetchWeatherData();
     //window.location.href = 'climate.html';
+});
+
+//using enter
+const searchBoxInput = document.querySelector('.search-box input')
+searchBoxInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        fetchWeatherData();
+    }
 });
 
 
@@ -11,6 +20,8 @@ document.getElementById('loginBtn').addEventListener('click', function() {
     window.location.href = 'login.html';
 });
 
+
+//to get location
 window.onload = function () {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -29,7 +40,6 @@ window.onload = function () {
         console.log("Erro no navegador.");
     }
 };
-
 
 
 function fetchWeatherDataLocal(lat, lon) {
@@ -177,10 +187,11 @@ function fetchWeatherData() {
 
 function fetchPrecpData(city){
     const options = {method: 'GET', headers: {accept: 'application/json'}};
-    const key = 'KEY'
+    const key = '5FrByyB0d2bKH22QdKfkH84ndokNjf5t'
     fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${key}`, options)
     .then(response => response.json())
     .then(data => {
+        console.log("CHUVAA",data);
         localStorage.setItem('apiDataRain', JSON.stringify(data));
     })
     .catch((error) => {
@@ -188,6 +199,16 @@ function fetchPrecpData(city){
     });
 }
 
+
+// const fetch = require('node-fetch');
+
+// const url = 'https://api.tomorrow.io/v4/weather/realtime?location=toronto&apikey=5FrByyB0d2bKH22QdKfkH84ndokNjf5t';
+// const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch(url, options)
+//   .then(res => res.json())
+//   .then(json => console.log(json))
+//   .catch(err => console.error('error:' + err));
 
 function fetchTideData(lat, lng) {
     const today = new Date();
@@ -199,7 +220,7 @@ function fetchTideData(lat, lng) {
 
     fetch(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${yesterdayISO}&end=${todayISO}`, {
         headers: {
-            'Authorization': 'KEY'
+            'Authorization': 'key'//'ec3f2ef6-81cd-11ef-a0d5-0242ac130003-ec3f2f5a-81cd-11ef-a0d5-0242ac130003'
         }
     })
     .then((response) => response.json())
