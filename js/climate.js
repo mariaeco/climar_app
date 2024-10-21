@@ -96,6 +96,9 @@ if (apiData) {
         case 'Haze':
             backgroundImage = "url('/static/images/mist.jpg')";
             break;
+        case 'Mist':
+            backgroundImage = "url('/static/images/mist.jpg')";
+            break;
         case 'Fog':
                 backgroundImage = "url('/static/images/fog.jpg')";
                 fetchFraseAleatoria("nevoa").then(fraseAleatoria => {
